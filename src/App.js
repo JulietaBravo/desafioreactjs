@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './componentes/NavBar.jsx';
-import ItemListContainer from './componentes/ItemListContainer.jsx';
+import ItemListContainer from './Container/ItemListContainer';
+
 
 function App() {
  
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
      
       <NavBar/>
-      <ItemListContainer/>
+      <ItemListContainer saludo='Hola soy ItemListContainer'/>
+      
     </div>
   );
 }
