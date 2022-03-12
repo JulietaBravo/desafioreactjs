@@ -3,6 +3,7 @@ import logo from '../images/logo.jpg'
 import navBar from '../css/NavBar.css'
 import CartWidget from './CartWidget.jsx'
 
+ 
 const NavBar = () => {
   return (
       <header>
@@ -16,12 +17,6 @@ const NavBar = () => {
         
         <h3>Paquetes
             <ul className="lista">
-                <li>New York</li>
-                <li>Miami</li>
-                <li>Madrid</li>
-                <li>Barcelona</li>
-                <li>Bali</li>
-                <li>Phi Phi Island</li>
             </ul>
         </h3>
         <h3>Vuelos</h3>
