@@ -1,56 +1,59 @@
-import { useState } from "react"; // acá importamos el hook, se usa use por convención
+import { useEffect, useState } from "react"; // acá importamos el hook, se usa use por convención
+import ItemList from "../componentes/ItemList";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
+import gFetch from "../helpers/gFetch"
 import Card from "react-bootstrap/Card";
-import PuntaCana from '../images/PuntaCana.jpg'
+import ItemCount from "../componentes/ItemCount";
 
-function ItemListContainer({nombreProducto, descripcionProducto, StockProducto, ImagenProducto}) {
-  const [count, setCount] = useState(0); // return [0,1] . Se usa así por convencion
 
-  const handleCount = () => {
+
+function ItemListContainer() {
+  const [bool, setBool] = useState(true)
+  const [loading, setLoading] = useState(true)
+  const [prods, setProds] = useState([])
+
+
+
+  useEffect (() =>{
+      gFetch
+      .then(resp => setProds(resp))
+      .catch(err => console.log(err))
+      .finally( ()=> setLoading (false))
+ 
+  }, [])
+
+  const ItemCount = (() =>{
+    const [count, setCount] = useState(0); // return [0,1] . Se usa así por convencion
+
+
+    const handleCount = () => {
+        if (count <10) {
+          setCount(count + 1);
+        } else {
+          setCount(10);
+        }
+      };
     
-    
-    console.log(count);
-    console.log(StockProducto);
-    if (count<StockProducto) {
-      setCount(count + 1);
-      
-    }
-    else{
-      setCount(StockProducto)
-    }
-  };
+      const handleCountMin = () => {
+        if (count > 0) {
+          setCount(count - 1);
+        } else {
+          setCount(0);
+        }
+      };
 
-  const handleCountMin = () => {
-    
-    console.log(count);
-    
-    if(count>0){
-      setCount(count - 1);
-    }
-    else{
-      setCount(0)
-    }
-  }
+})
 
-
+ console.log(prods); 
   return (
-    <>       
-      <Card style={{ width: "18rem" }}>
-        <Card.Img ImagenProducto variant="top" src={ImagenProducto} />  
-        <Card.Body>
-          <Card.Title nombreProducto> {nombreProducto} </Card.Title>
-          <Card.Text descripcionProducto> {descripcionProducto} </Card.Text>
-          <Card.Text StockProducto> {StockProducto} </Card.Text>
-          <Card.Text> {count} </Card.Text>
-          <Button variant="primary" onClick={handleCount}>Agregar al carrito</Button>
-          <br></br>
-          <br></br>
-          <Button variant="primary" onClick={handleCountMin}>Quitar del carrito</Button>
-        </Card.Body>
-      </Card>
+    <>
+     {       loading ? <h2>Cargando...</h2> 
+                    :
+                        <ItemList prods={prods} />
+                }
     </>
   );
-}
 
+ }
 export default ItemListContainer;
