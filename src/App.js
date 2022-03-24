@@ -18,6 +18,7 @@ function App() {
     <BrowserRouter>
     <div className="App">
     <NavBar/>
+
     <Routes>
 
       <Route
@@ -43,9 +44,6 @@ function App() {
       />
       </Routes>    
         
-      
-      
-      
     </div>
     </BrowserRouter>
   );

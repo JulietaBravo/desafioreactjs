@@ -1,10 +1,10 @@
 import Item from "./Item.jsx"
 import gFetch from "../helpers/gFetch.js"
 
-function ItemList({prods}) {
+function ItemList({productos}) {
     return(
         <>
-        {prods.map((prods) => <Item prod={prods} /> )}
+        {productos.map((producto) => <Item key={producto.id} producto={producto} /> )}
         </>
     )
     

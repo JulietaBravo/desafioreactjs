@@ -1,26 +1,7 @@
-navBar{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: grid;
-    grid-template-columns: 20% 80%;
-    margin-top: 0.5rem;
-}
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Nunito:wght@300&family=Staatliches&display=swap');
 
-.logo-img{
+.logo-imagen{
     height: 10rem;
-    width: 15rem;
+    width: 10rem;
 }
 
-.container-logo{
-    margin-top: 1rem;
-}
-
-.container-menu{
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    padding-left: 2rem;
-}
-
-.lista{
-    list-style: none;
-    text-align: center;
-}

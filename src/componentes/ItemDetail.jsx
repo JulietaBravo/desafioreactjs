@@ -3,7 +3,7 @@ function ItemDetail({producto}) {
     <div>
         <img src={producto.imagenProducto} alt="imagen" />
         <p>{producto.nombreProducto}</p>
-        <p>{producto.categoriaProducto}</p>
+        <p>{producto.categoria}</p>
         <p>{producto.precioProducto}</p>
     </div>
   )
