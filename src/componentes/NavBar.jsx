@@ -6,6 +6,7 @@ import CartWidget from "./CartWidget.jsx";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import styles from "../css/styles.css";
 
 function NavBar() {
   return (
@@ -17,8 +18,8 @@ function NavBar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink to="categoria/Vuelos">Vuelos</NavLink>
-            <NavLink to="categoria/Paquetes">Paquetes</NavLink>
+            <NavLink to="categoria/Vuelos" className="tituloNav">Vuelos</NavLink>
+            <NavLink to="categoria/Paquetes" className="tituloNav">Paquetes</NavLink>
           </Nav>
           <Nav>
             <Nav.Link eventKey={2} href="#cart">

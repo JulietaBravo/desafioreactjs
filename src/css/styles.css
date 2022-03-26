@@ -1,13 +1,45 @@
 .itemListContainer{
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 1fr;
     margin-top: 1rem;
     margin-bottom: 1rem;
+    margin-right: 1rem;
 }
 
 .itemIndividual{
     margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 1rem;
+}
+
+.containerCard{
+    margin: 0rem;
+}
+
+.imgItem{
+    height: auto;
+    width: 30rem;
+    padding: 2rem;
+}
+.button{
+   border-radius: 0.3rem;
+   margin: 0.8rem;
+   background-color: white;
+   border-color: white;
+    
+}
+
+.buttonAdd{
+    border-radius: 0.3rem;
+    background-color: white;
+    margin-bottom: 1rem;
+    border-color: white;
+    margin-left: 1rem;
+}
+
+.tituloNav{
+    padding: 1rem;
+    color: whitesmoke;
+    text-decoration: none;
 }

@@ -17,42 +17,26 @@ function ItemListContainer() {
   useEffect(() => {
     if (id) {
       gFetch
-        .then(resp => setProductos(resp.filter(producto => producto.categoria === id)))
-        .catch(err => console.log(err))
+        .then((resp) =>
+          setProductos(resp.filter((producto) => producto.categoria === id))
+        )
+        .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     } else {
       gFetch
-        .then(resp => setProductos(resp))
-        .catch(err => console.log(err))
+        .then((resp) => setProductos(resp))
+        .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }
   }, [id]);
 
-  const ItemCount = () => {
-    const [count, setCount] = useState(0); // return [0,1] . Se usa así por convencion
-
-    const handleCount = () => {
-      if (count < 10) {
-        setCount(count + 1);
-      } else {
-        setCount(10);
-      }
-    };
-
-    const handleCountMin = () => {
-      if (count > 0) {
-        setCount(count - 1);
-      } else {
-        setCount(0);
-      }
-    };
-  };
-
   console.log(id);
   return (
-    <div className="itemListContainer">
-      {loading ? <h2>Cargando...</h2> : <ItemList productos={productos} />}
-    </div>
+    <>
+      <div className="itemListContainer">
+        {loading ? <h2>Cargando...</h2> : <ItemList productos={productos} />}
+      </div>
+    </>
   );
 }
 export default ItemListContainer;

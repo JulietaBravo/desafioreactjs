@@ -8,7 +8,7 @@ import styles from "../css/styles.css";
 
 function Item({ producto }) {
   return (
-    <Link to={`detalleProducto/${producto.id}`}>
+    
       <div className="itemIndividual">
         <Card style={{ width: "18rem" }}>
           <Card.Img imagenProducto variant="top" src={producto.imagenProducto} />
@@ -22,11 +22,13 @@ function Item({ producto }) {
             <Card.Text precioProducto> {producto.precioProducto} </Card.Text>
             <Card.Text categoriaProducto> {producto.categoria} </Card.Text>
             <Card.Text> {producto.count} </Card.Text>
-            <Button variant="primary">Descripción</Button>
+            <Link to={`detalleProducto/${producto.id}`}>
+            <Button variant="primary">Detalle</Button>
+            </Link>
           </Card.Body>
         </Card>
       </div>
-    </Link>
+    
   );
 }
 

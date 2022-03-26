@@ -1,27 +1,30 @@
-/* import {useState} from 'react'
-import gFetch from '../helpers/gFetch'
- 
- 
+import { useState } from "react";
+import styles from "../css/styles.css";
 
-const ItemCount = (() =>{
-    const [count, setCount] = useState(0); // return [0,1] . Se usa así por convencion
+const ItemCount = ({ initial, stock, onAdd }) => {
+  const [count, setCount] = useState(initial);
+
+  const sumar = () => {
+    if (count < stock) {
+      setCount(count + 1);
+    }
+  };
+  const restar = () => {
+    if (count > initial) {
+      setCount(count - 1);
+    }
+  };
+
+console.log(count);
 
 
-    const handleCount = () => {
-        if (count <10) {
-          setCount(count + 1);
-        } else {
-          setCount(10);
-        }
-      };
-    
-      const handleCountMin = () => {
-        if (count > 0) {
-          setCount(count - 1);
-        } else {
-          setCount(0);
-        }
-      };
+  return (
+    <div >
+      <button onClick={restar} className="button"> - </button>
+      <label> {count} </label>
+      <button onClick={sumar} className="button"> + </button>
+    </div>
+  );
+};
 
-})
-export default ItemCount */
+export default ItemCount;
