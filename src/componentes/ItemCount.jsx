@@ -1,5 +1,9 @@
 import { useState } from "react";
 import styles from "../css/styles.css";
+import ItemListContainer from "../Container/ItemListContainer";
+import Intercambiabilidad from "./Itermcambiabilidad";
+import Button from "react-bootstrap/esm/Button";
+
 
 const ItemCount = ({ initial, stock, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -15,7 +19,9 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     }
   };
 
-console.log(count);
+const agregar = () => {
+    onAdd(count)
+  } 
 
 
   return (
@@ -23,6 +29,7 @@ console.log(count);
       <button onClick={restar} className="button"> - </button>
       <label> {count} </label>
       <button onClick={sumar} className="button"> + </button>
+      <Button className="buttonAdd" onClick={agregar}>Agregar Al carrito</Button>
     </div>
   );
 };
