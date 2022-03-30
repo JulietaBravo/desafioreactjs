@@ -43,3 +43,22 @@
     color: whitesmoke;
     text-decoration: none;
 }
+
+.imgCart{
+    width: 75%;
+    height: auto;
+    
+}
+.listCart{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100%;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    border: 1px solid black;
+}
+
+ul{
+    margin-bottom: 0rem;
+}

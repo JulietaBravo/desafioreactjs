@@ -29,6 +29,7 @@ const agregar = () => {
       <button onClick={restar} className="button"> - </button>
       <label> {count} </label>
       <button onClick={sumar} className="button"> + </button>
+      <br />
       <Button className="buttonAdd" onClick={agregar}>Agregar Al carrito</Button>
     </div>
   );

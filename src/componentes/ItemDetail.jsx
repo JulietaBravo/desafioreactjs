@@ -22,7 +22,7 @@ const [isCant, setIsCant] = useState(false)
     <div className="containerCard">
       <img src={producto.imagenProducto} alt="imagen" className="imgItem" />
       <h1>{producto.nombreProducto}</h1>
-      <h3>{producto.precioProducto}</h3>
+      <h3>$ {producto.precioProducto}</h3>
       {isCant?
       <>
       <Link to='/'>

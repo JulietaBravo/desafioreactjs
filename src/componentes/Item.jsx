@@ -19,7 +19,7 @@ function Item({ producto }) {
               {producto.descripcionProducto}{" "}
             </Card.Text>
             <Card.Text stockProducto> {producto.stockProducto} </Card.Text>
-            <Card.Text precioProducto> {producto.precioProducto} </Card.Text>
+            <Card.Text precioProducto> $  {producto.precioProducto} </Card.Text>
             <Card.Text categoriaProducto> {producto.categoria} </Card.Text>
             <Card.Text> {producto.count} </Card.Text>
             <Link to={`detalleProducto/${producto.id}`}>

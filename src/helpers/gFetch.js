@@ -10,16 +10,16 @@ import ushuaia from '../images/ushuaia.jpg'
 import bsas from '../images/bsas.jpg'
 
 const productos = [
-    {id: 1, nombreProducto: 'Miami', descripcionProducto: 'Paquete a Miami', imagenProducto: miami, categoria: 'Paquetes', precioProducto: '$327.000'},
-    {id: 2, nombreProducto: 'Madrid', descripcionProducto: 'Paquete a Madrid',  imagenProducto: madrid, categoria:'Paquetes', precioProducto:'$410.000'},
-    {id: 3, nombreProducto: 'Barcelona', descripcionProducto: 'Vuelo a Barcelona',  imagenProducto: barcelona, categoria:'Vuelos', precioProducto:'$99.000'},
-    {id: 4, nombreProducto: 'Punta Cana', descripcionProducto: 'Paquete a Punta Cana',  imagenProducto: puntacana, categoria:'Paquetes', precioProducto:'$250.000'},
-    {id: 5, nombreProducto: 'Rio de Janeiro', descripcionProducto: 'Vuelos a Rio de Janeiro',  imagenProducto: rio, categoria:'Vuelos', precioProducto:'$87.000'},
-    {id: 6, nombreProducto: 'San Carlos de Bariloche', descripcionProducto: 'Vuelo a Bariloche',  imagenProducto: bariloche, categoria:'Vuelos', precioProducto:'$66.000'},
-    {id: 7, nombreProducto: 'Mendoza', descripcionProducto: 'Paquete a Mendoza',  imagenProducto: mendoza, categoria:'Paquetes', precioProducto:'$130.000'},
-    {id: 8, nombreProducto: 'Calafate', descripcionProducto: 'Paquete al Calafate',  imagenProducto: calafate, categoria:'Paquetes', precioProducto:'$170.000'},
-    {id: 9, nombreProducto: 'Ushuaia', descripcionProducto: 'Vuelos a Ushuaia',  imagenProducto: ushuaia, categoria:'Vuelos', precioProducto:'$98.000'},
-    {id: 10, nombreProducto: 'Buenos Aires', descripcionProducto: 'Paquete a Buenos Aires',  imagenProducto: bsas, categoria:'Paquetes', precioProducto:'$150.000'}
+    {id: 1, nombreProducto: 'Miami', descripcionProducto: 'Paquete a Miami', imagenProducto: miami, categoria: 'Paquetes', precioProducto: 327000},
+    {id: 2, nombreProducto: 'Madrid', descripcionProducto: 'Paquete a Madrid',  imagenProducto: madrid, categoria:'Paquetes', precioProducto:410000},
+    {id: 3, nombreProducto: 'Barcelona', descripcionProducto: 'Vuelo a Barcelona',  imagenProducto: barcelona, categoria:'Vuelos', precioProducto:99000},
+    {id: 4, nombreProducto: 'Punta Cana', descripcionProducto: 'Paquete a Punta Cana',  imagenProducto: puntacana, categoria:'Paquetes', precioProducto:250000},
+    {id: 5, nombreProducto: 'Rio de Janeiro', descripcionProducto: 'Vuelos a Rio de Janeiro',  imagenProducto: rio, categoria:'Vuelos', precioProducto:87000},
+    {id: 6, nombreProducto: 'San Carlos de Bariloche', descripcionProducto: 'Vuelo a Bariloche',  imagenProducto: bariloche, categoria:'Vuelos', precioProducto:66000},
+    {id: 7, nombreProducto: 'Mendoza', descripcionProducto: 'Paquete a Mendoza',  imagenProducto: mendoza, categoria:'Paquetes', precioProducto:130000},
+    {id: 8, nombreProducto: 'Calafate', descripcionProducto: 'Paquete al Calafate',  imagenProducto: calafate, categoria:'Paquetes', precioProducto:170000},
+    {id: 9, nombreProducto: 'Ushuaia', descripcionProducto: 'Vuelos a Ushuaia',  imagenProducto: ushuaia, categoria:'Vuelos', precioProducto:98000},
+    {id: 10, nombreProducto: 'Buenos Aires', descripcionProducto: 'Paquete a Buenos Aires',  imagenProducto: bsas, categoria:'Paquetes', precioProducto:150000}
 ]
 
 
