@@ -4,7 +4,6 @@ import ItemListContainer from "../Container/ItemListContainer";
 import Intercambiabilidad from "./Itermcambiabilidad";
 import Button from "react-bootstrap/esm/Button";
 
-
 const ItemCount = ({ initial, stock, onAdd }) => {
   const [count, setCount] = useState(initial);
 
@@ -19,18 +18,25 @@ const ItemCount = ({ initial, stock, onAdd }) => {
     }
   };
 
-const agregar = () => {
-    onAdd(count)
-  } 
-
+  const agregar = () => {
+    onAdd(count);
+  };
 
   return (
-    <div >
-      <button onClick={restar} className="button"> - </button>
+    <div>
+      <button onClick={restar} className="button">
+        {" "}
+        -{" "}
+      </button>
       <label> {count} </label>
-      <button onClick={sumar} className="button"> + </button>
+      <button onClick={sumar} className="button">
+        {" "}
+        +{" "}
+      </button>
       <br />
-      <Button className="buttonAdd" onClick={agregar}>Agregar Al carrito</Button>
+      <Button className="buttonAdd" onClick={agregar}>
+        Agregar Al carrito
+      </Button>
     </div>
   );
 };
