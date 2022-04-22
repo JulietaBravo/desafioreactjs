@@ -7,14 +7,18 @@ import Card from "react-bootstrap/Card";
 import ItemCount from "../componentes/ItemCount";
 import { useParams } from "react-router-dom";
 import styles from "../css/styles.css";
+import React from "react";
+
+import {collection, doc, getDoc, getDocs, getFirestore, query, where} from "firebase/firestore"
 
 function ItemListContainer() {
   const [bool, setBool] = useState(true);
   const [loading, setLoading] = useState(true);
   const [productos, setProductos] = useState([]);
+  const [prod, setProd] = useState([]);
   const { id } = useParams();
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (id) {
       gFetch
         .then((resp) =>
@@ -28,10 +32,33 @@ function ItemListContainer() {
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }
-  }, [id]);
+  }, [id]); */
 
-  console.log(id);
-  return (
+  /* useEffect(()=>{
+    const db = getFirestore
+
+    const queryDoc = doc(db, 'items', 'ire68xiOt0qo9wHdXX3n')
+    getDoc(queryDoc)  
+    .then(resp => setProd( {id: resp.id, ...resp.data()} ))
+  }, [id]) */
+
+  useEffect(()=>{
+    const db = getFirestore ()
+    const queryCollection = !id 
+    ? 
+        collection(db, 'Item' )
+    :  
+        query( collection(db, 'Item' ), 
+            where('categoria','==', id) 
+            //orderBy("title", "desc")                                   
+        )
+    getDocs(queryCollection)
+    .then(resp => setProductos( resp.docs.map(producto =>({id: producto.id, ...producto.data()}))))
+    .catch(err => console.log(err))
+    .finally(()=> setLoading (false))
+   }, [id])
+
+    return (
     <>
       <div className="itemListContainer">
         {loading ? <h2>Cargando...</h2> : <ItemList productos={productos} />}
@@ -39,4 +66,5 @@ function ItemListContainer() {
     </>
   );
 }
-export default ItemListContainer;
+
+export default ItemListContainer; 

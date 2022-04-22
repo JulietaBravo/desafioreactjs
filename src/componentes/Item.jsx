@@ -22,7 +22,7 @@ function Item({ producto }) {
             <Card.Text precioProducto> $  {producto.precioProducto} </Card.Text>
             <Card.Text categoriaProducto> {producto.categoria} </Card.Text>
             <Card.Text> {producto.count} </Card.Text>
-            <Link to={`detalleProducto/${producto.id}`}>
+            <Link to ={`../detalleProducto/${producto.id}`}>
             <Button variant="primary">Detalle</Button>
             </Link>
           </Card.Body>
